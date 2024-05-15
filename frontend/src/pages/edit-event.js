@@ -75,7 +75,7 @@ function EditEvent() {
     useEffect(() => {
         const fetchEventDetails = async () => {
           try {
-            const response = await fetch(`/events/${id}`); // Adjust the API endpoint
+            const response = await fetch(`https://sponsor-connect.vercel.app/events/${id}`); // Adjust the API endpoint
             const data = await response.json();
             // console.log(...data);
             if (response.ok) {
@@ -128,7 +128,7 @@ function EditEvent() {
               formData.append('numPackages', numPackages);
               formData.append('packages', JSON.stringify(packages));
         
-              const res = await fetch(`/editevent/${id}`, {
+              const res = await fetch(`https://sponsor-connect.vercel.app/editevent/${id}`, {
                 method: "PUT",
                 body: formData,
               });
