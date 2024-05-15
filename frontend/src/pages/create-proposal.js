@@ -16,7 +16,7 @@ function CreateProposal() {
 
   const fetchtemplate = async () => {
     try {
-        const response = await fetch(`/templates/${templateNumber}`);
+        const response = await fetch(`https://sponsor-connect.vercel.app/templates/${templateNumber}`);
         const data = await response.json();
         if (response.ok) {
           setFormattedText(data[0].templateText); 
@@ -42,7 +42,7 @@ function CreateProposal() {
     setError(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
     try {
-      const response = await fetch('/createproposal', {
+      const response = await fetch('https://sponsor-connect.vercel.app/createproposal', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

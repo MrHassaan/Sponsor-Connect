@@ -12,7 +12,7 @@ function ViewEvents() {
   
   const fetchEvents = async () => {
     try {
-      let apiUrl = '/getevents';
+      let apiUrl = 'https://sponsor-connect.vercel.app/getevents';
 
       
       const params = new URLSearchParams();
@@ -45,7 +45,7 @@ function ViewEvents() {
  
   const handleDelete = async (eventId) => {
     try {
-      const res = await fetch(`/deleteevent/${eventId}`, {
+      const res = await fetch(`https://sponsor-connect.vercel.app/deleteevent/${eventId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

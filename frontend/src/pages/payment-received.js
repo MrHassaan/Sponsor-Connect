@@ -11,7 +11,7 @@ function PaymentReceived() {
     
     const fetchPayments = async () => {
         try {
-            let apiUrl = '/getreceivedpayments';
+            let apiUrl = 'https://sponsor-connect.vercel.app/getreceivedpayments';
             const res = await fetch(apiUrl, {
               method: 'GET',
               headers: {
@@ -45,7 +45,7 @@ function PaymentReceived() {
             setReceivedPayments(updatedPayments);
 
             // Send a request to update the status on the server
-            const apiUrl = `/updatePaymentStatus/${paymentId}`;
+            const apiUrl = `https://sponsor-connect.vercel.app/updatePaymentStatus/${paymentId}`;
             await fetch(apiUrl, {
                 method: 'PUT',
                 headers: {

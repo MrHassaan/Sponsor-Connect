@@ -21,7 +21,7 @@ function Chat() {
 	const receiver = searchParams.get('organizerId');
 useEffect(() => {
 	fetchContacts();
-	const socket = io('http://localhost:5000',{
+	const socket = io('https://sponsor-connect.vercel.app',{
 		query:{
 			userId:userstate.userId,
 		},
@@ -51,7 +51,7 @@ useEffect(() => {
 
 const fetchContacts = () => {
 	// Make a request to fetch contacts
-	const url = receiver ? `/mycontacts?organizerId=${receiver}` : '/mycontacts';
+	const url = receiver ? `https://sponsor-connect.vercel.app/mycontacts?organizerId=${receiver}` : 'https://sponsor-connect.vercel.app/mycontacts';
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
@@ -64,7 +64,7 @@ const fetchContacts = () => {
 const sendMessage = () => {
 
         // Make a request to your API endpoint
-        fetch('send-message', {
+        fetch('https://sponsor-connect.vercel.app/send-message', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const sendMessage = () => {
 
     const fetchMessages = async ()=>{
 		try {
-            const response = await fetch(`/messages?receiverId=${selectedContact}`, {
+            const response = await fetch(`https://sponsor-connect.vercel.app/messages?receiverId=${selectedContact}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -117,7 +117,7 @@ const sendMessage = () => {
         // console.log('Fetching messages for receiverId:', receiverId);
         // setSelectedContact(receiverId);
 		try {
-            const response = await fetch(`/messages?receiverId=${contact.receiverId}`, {
+            const response = await fetch(`https://sponsor-connect.vercel.app/messages?receiverId=${contact.receiverId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

@@ -19,7 +19,7 @@ function EventDetails() {
   
   const fetchEventData = async () => {
     try {
-        const response = await fetch(`/events/${id}`);
+        const response = await fetch(`https://sponsor-connect.vercel.app/events/${id}`);
         const data = await response.json();
         if (response.ok) {
             data[0].startdate = data[0].startdate.split('T')[0];
@@ -35,7 +35,7 @@ function EventDetails() {
 
 const fetchSponsoredEvents = async () => {
     try {
-        const response = await fetch(`/checksponsoredevents/${id}`);
+        const response = await fetch(`https://sponsor-connect.vercel.app/checksponsoredevents/${id}`);
         const data = await response.json();
         
         if (response.ok) {
@@ -70,7 +70,7 @@ const fetchSponsoredEvents = async () => {
             setErrorMessage('Please select at least one package.');
         } else {
             try {
-                const response = await fetch('/sponsoredevents', {
+                const response = await fetch('https://sponsor-connect.vercel.app/sponsoredevents', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const fetchSponsoredEvents = async () => {
         const stripe = await loadStripe('pk_test_51PAWz1LpRQPWr6S0RySFFdCK33NXaHwnXXfQr8GqUhlZYAh2W4te4JpFAcuxYAHsuhMSkPao4ZswtGCYqwrWje3H00ph3AxAkW');
 
         try {
-            const response = await fetch('/create-checkout-session', {
+            const response = await fetch('https://sponsor-connect.vercel.app/create-checkout-session', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

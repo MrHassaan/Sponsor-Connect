@@ -14,7 +14,7 @@ function Proposal() {
   
   const handleDelete = async (proposalId) => {
     try {
-      const res = await fetch(`/deleteproposal/${proposalId}`, {
+      const res = await fetch(`https://sponsor-connect.vercel.app/deleteproposal/${proposalId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ function Proposal() {
 
   const fetchTemplates = async () => {
     try {
-      const res = await fetch('/getalltemplates', {
+      const res = await fetch('https://sponsor-connect.vercel.app/getalltemplates', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function Proposal() {
 
   const fetchProposals = async () => {
     try {
-      const res = await fetch('/getallproposals', {
+      const res = await fetch('https://sponsor-connect.vercel.app/getallproposals', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

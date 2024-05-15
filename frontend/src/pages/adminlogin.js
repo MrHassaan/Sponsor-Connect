@@ -23,7 +23,7 @@ function AdminLogin() {
                 const { email, password } = user;
                 
                 try {
-                    const res = await fetch("/adminlogin", {
+                    const res = await fetch("https://sponsor-connect.vercel.app/adminlogin", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

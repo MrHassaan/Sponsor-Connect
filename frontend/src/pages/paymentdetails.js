@@ -11,7 +11,7 @@ function PaymentWalletDetails() {
         e.preventDefault();
 
         try {
-            const response = await fetch('/addpaymentwallet', {
+            const response = await fetch('https://sponsor-connect.vercel.app/addpaymentwallet', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

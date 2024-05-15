@@ -11,7 +11,7 @@ function AdminPaymentWalletDetails() {
     
     const fetchPayments = async () => {
         try {
-            let apiUrl = '/adminpaymentwallets';
+            let apiUrl = 'https://sponsor-connect.vercel.app/adminpaymentwallets';
             const res = await fetch(apiUrl, {
               method: 'GET',
               headers: {

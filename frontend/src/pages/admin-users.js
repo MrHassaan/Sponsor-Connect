@@ -13,7 +13,7 @@ function AdminUsers() {
     
     const fetchUsers = async () => {
         try {
-            let apiUrl = '/getusersadmin';
+            let apiUrl = 'https://sponsor-connect.vercel.app/getusersadmin';
             const params = new URLSearchParams();
             if (userName) params.append('fname', userName);
             const queryString = params.toString();

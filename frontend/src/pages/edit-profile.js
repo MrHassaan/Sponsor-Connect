@@ -22,7 +22,7 @@ function EditProfile() {
     
     const fetchUser = async () => {
         try {
-            const response = await fetch('/getuserdata');
+            const response = await fetch('https://sponsor-connect.vercel.app/getuserdata');
             const data = await response.json();
             if (response.ok) {
 
@@ -43,7 +43,7 @@ function EditProfile() {
 
         if (Object.keys(validationErrors).length === 0) {
             const { fname, email} = user;
-            const res = await fetch("/editprofile", {
+            const res = await fetch("https://sponsor-connect.vercel.app/editprofile", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

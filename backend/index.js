@@ -20,7 +20,7 @@ const path = require('path');
 
 app.use(cors());
 app.use(cors({
-  origin: 'https://sponsor-front.vercel.app'
+  origin: 'https://sponsor-connect-front.vercel.app'
 }));
 app.use(bodyParser.json());
 // app.use(express.json());
