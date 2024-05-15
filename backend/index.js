@@ -19,6 +19,9 @@ const multer = require('multer');
 const path = require('path');
 
 app.use(cors());
+app.use(cors({
+  origin: 'https://sponsor-front.vercel.app'
+}));
 app.use(bodyParser.json());
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
