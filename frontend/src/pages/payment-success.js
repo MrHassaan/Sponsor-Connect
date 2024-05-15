@@ -18,7 +18,7 @@ function PaymentSuccess() {
 
     const savePayment = async (eventData, amount) => {
         try {
-            const response = await fetch('/save-payment', {
+            const response = await fetch('https://sponsor-connect.vercel.app/save-payment', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
