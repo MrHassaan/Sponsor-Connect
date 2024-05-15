@@ -9,7 +9,7 @@ const Logout = () => {
   useEffect(() => {
     const logoutUser = async () => {
       try {
-        const response = await fetch('https://sponsor-connect.vercel.app/logout', {
+        const response = await fetch('https://sponsor-connect-self.vercel.app/logout', {
           method: 'GET',
           headers: {
             Accept: 'application/json',

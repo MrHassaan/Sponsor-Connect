@@ -23,7 +23,7 @@ function Login() {
             setError(loginvalidation(user));
             
             const {email,password} = user;
-            const res = await fetch("https://sponsor-connect.vercel.app/login",{
+            const res = await fetch("https://sponsor-connect-self.vercel.app/login",{
                 method:"POST",
                 headers:{
                     "Content-Type" : "application/json"
