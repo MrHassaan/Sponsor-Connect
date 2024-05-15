@@ -100,7 +100,7 @@ function CreateEvent() {
               formData.append('enddate', enddate);
               formData.append('numPackages', numPackages);
               formData.append('packages', JSON.stringify(packages));
-              const res = await fetch("/createevent", {
+              const res = await fetch("https://sponsor-connect.vercel.app/createevent", {
                 method: "POST",
                 body: formData,
               });
