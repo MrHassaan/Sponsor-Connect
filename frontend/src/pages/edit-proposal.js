@@ -26,7 +26,7 @@ function EditProposal() {
     setError(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
     try {
-      const response = await fetch(`/editproposal/${id}`, {
+      const response = await fetch(`https://sponsor-connect.vercel.app/editproposal/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ function EditProposal() {
   useEffect(() => {
     const fetchProposalDetails = async () => {
       try {
-        const response = await fetch(`/proposals/${id}`); 
+        const response = await fetch(`https://sponsor-connect.vercel.app/proposals/${id}`); 
         const data = await response.json();
         
         if (response.ok) {
