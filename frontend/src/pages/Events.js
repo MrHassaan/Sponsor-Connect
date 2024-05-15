@@ -12,7 +12,7 @@ function Events() {
     const [events, setEvents] = useState([]);
     const fetchEvents = async () => {
         try {
-            let apiUrl = '/getallevents';
+            let apiUrl = 'https://sponsor-connect-front.vercel.app/getallevents';
 
             if (eventType && eventLocation && eventTitle) {
               apiUrl += `?eventtype=${eventType}&location=${eventLocation}&title=${eventTitle}`;
