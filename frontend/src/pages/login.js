@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import {loginvalidation} from './Validation';
 import { Link } from 'react-router-dom';
 
-
 import { useDispatch } from 'react-redux';
 function Login() { 
     const dispatch = useDispatch();
@@ -24,7 +23,7 @@ function Login() {
             setError(loginvalidation(user));
             
             const {email,password} = user;
-            const res = await fetch("https://sponsor-connect.vercel.app/login",{
+            const res = await fetch("/login",{
                 method:"POST",
                 headers:{
                     "Content-Type" : "application/json"
