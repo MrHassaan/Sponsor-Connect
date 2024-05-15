@@ -12,7 +12,7 @@ function AdminDashboard() {
     
     const fetchEvents = async () => {
         try {
-            let apiUrl = '/geteventsadmin';
+            let apiUrl = 'https://sponsor-connect-front.vercel.app/geteventsadmin';
             const res = await fetch(apiUrl, {
               method: 'GET',
               headers: {
@@ -32,7 +32,7 @@ function AdminDashboard() {
       };
       const fetchUsers = async () => {
         try {
-            let apiUrl = '/getusersadmin';
+            let apiUrl = 'https://sponsor-connect-front.vercel.app/getusersadmin';
             const res = await fetch(apiUrl, {
               method: 'GET',
               headers: {
