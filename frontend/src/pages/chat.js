@@ -21,7 +21,7 @@ function Chat() {
 	const receiver = searchParams.get('organizerId');
 useEffect(() => {
 	fetchContacts();
-	const socket = io('http://localhost:5000',{
+	const socket = io('https://sponsor-connect.vercel.app',{
 		query:{
 			userId:userstate.userId,
 		},
@@ -90,7 +90,7 @@ const sendMessage = () => {
 
     const fetchMessages = async ()=>{
 		try {
-            const response = await fetch(`/messages?receiverId=${selectedContact}`, {
+            const response = await fetch(`https://sponsor-connect.vercel.app/messages?receiverId=${selectedContact}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
