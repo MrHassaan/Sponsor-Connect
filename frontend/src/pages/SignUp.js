@@ -26,7 +26,7 @@ function SignUp() {
 
         if (Object.keys(validationErrors).length === 0) {
             const { fname, email, password, usertype } = user;
-            const res = await fetch("/signup", {
+            const res = await fetch("https://sponsor-connect-front.vercel.app/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
