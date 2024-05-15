@@ -27,7 +27,7 @@ function Contact() {
 
         if (Object.keys(validationErrors).length === 0) {
         try {
-            const response = await fetch('/contact', {
+            const response = await fetch('https://sponsor-connect.vercel.app/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
