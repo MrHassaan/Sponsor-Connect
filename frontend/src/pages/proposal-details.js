@@ -13,7 +13,7 @@ function EventDetails() {
     useEffect(() => {
         const fetchEventData = async () => {
             try {
-                const response = await fetch(`/events/${id}`);
+                const response = await fetch(`https://sponsor-connect.vercel.app/events/${id}`);
                 const data = await response.json();
                 if (response.ok) {
                     console.log(data[0]);
