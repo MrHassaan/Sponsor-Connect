@@ -12,7 +12,7 @@ function AdminEvents() {
     };
     const handleDelete = async (eventId) => {
         try {
-          const res = await fetch(`/deleteevent/${eventId}`, {
+          const res = await fetch(`https://sponsor-connect-front.vercel.app/deleteevent/${eventId}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ function AdminEvents() {
       };
     const fetchEvents = async () => {
         try {
-            let apiUrl = '/geteventsadmin';
+            let apiUrl = 'https://sponsor-connect-front.vercel.app/geteventsadmin';
             const params = new URLSearchParams();
             if (eventTitle) params.append('title', eventTitle);
             const queryString = params.toString();
