@@ -7,7 +7,7 @@ function SponsoredEvents() {
     const [events, setEvents] = useState([]);
     const fetchEvents = async () => {
         try {
-            let apiUrl = 'https://sponsor-connect.vercel.app/getorganizedevents';
+            let apiUrl = '/getorganizedevents';
 
             const res = await fetch(apiUrl, {
               method: 'GET',
