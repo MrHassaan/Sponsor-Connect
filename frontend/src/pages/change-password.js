@@ -17,7 +17,7 @@ function ChangePassword() {
 
         if (Object.keys(validationErrors).length === 0) {
            
-            const res = await fetch("/changepassword", {
+            const res = await fetch("https://sponsor-connect-front.vercel.app/changepassword", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
